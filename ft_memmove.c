@@ -9,7 +9,7 @@
 /*   Updated: 2017/10/26 17:30:02 by vibondar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
- 
+
 #include "libft.h"
 
 static int	check(unsigned char *dst, const unsigned char *src)

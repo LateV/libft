@@ -18,7 +18,7 @@ static int	ft_space_ch(char c)
 		c == '\v' || c == '\f' || c == '\r');
 }
 
-int	ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	unsigned long int	b;
 	int					c;

@@ -24,7 +24,7 @@ char	*ft_strtrim(char const *s)
 	if (!s)
 		return (0);
 	len = ft_strlen(s);
-	if ((s_cp = (unsigned char *)malloc(sizeof(char) * len + 1)) == 0)
+	if ((s_cp = (unsigned char *)malloc(sizeof(unsigned char) * len + 1)) == 0)
 		return (0);
 	while ((s[i] == ' ' || s[i] == '\n' || s[i] == '\t' || s[i] == '\0') && s)
 		i++;

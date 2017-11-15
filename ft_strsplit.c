@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int	ft_let_num(char const *str, char ch, int i)
+static	int	ft_let_num(char const *str, char ch, int i)
 {
 	int	n;
 
@@ -21,6 +21,7 @@ static int	ft_let_num(char const *str, char ch, int i)
 		n++;
 	return (n);
 }
+
 static char	*put_word(char const *str, char ch, int *i)
 {
 	int		j;
@@ -40,7 +41,7 @@ static char	*put_word(char const *str, char ch, int *i)
 	return (word);
 }
 
-static int	ft_word_num(char *str, char ch)
+static int	ft_wn(char *str, char ch)
 {
 	int	i;
 	int	counter;
@@ -57,27 +58,27 @@ static int	ft_word_num(char *str, char ch)
 	return (counter);
 }
 
-
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
-	int i;
-	int k;
-	char **r;
+	int		i;
+	int		k;
+	char	**r;
 
 	if (!s || !c)
 		return (0);
 	i = 0;
 	k = 0;
-	if ((r = (char **)malloc(sizeof(char *) * ft_word_num((char *)s, c) + 1))
-		== 0)
+	if ((r = (char **)malloc(sizeof(char *) * ft_wn((char *)s, c) + 1)) == 0)
 		return (0);
-	while (s[k] != '\0' )
+	while (s[k] != '\0')
 	{
 		if (s[k] != c)
 		{
-			if ((r[i] = put_word(s, c, &k)) == 0)
+			if ((r[i++] = put_word(s, c, &k)) == 0)
+			{
+				ft_memdel((void **)r);
 				return (0);
-			i++;
+			}
 		}
 		else
 			k++;

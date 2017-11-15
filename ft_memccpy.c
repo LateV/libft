@@ -14,10 +14,10 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	unsigned char  *d;
-	const unsigned char  *s;
-	unsigned char p;
-	size_t i;
+	unsigned char			*d;
+	const unsigned char		*s;
+	unsigned char			p;
+	size_t					i;
 
 	i = 0;
 	p = (unsigned char)c;
@@ -29,9 +29,9 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 		if (d[i] == p)
 		{
 			i++;
-			return(dst + i);
+			return (dst + i);
 		}
 		i++;
 	}
-	return(NULL);
+	return (NULL);
 }

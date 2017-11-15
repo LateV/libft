@@ -10,20 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	int a;
 
 	a = 1;
 	if (n < 0)
 	{
-		ft_putchar_fd('-' , fd);
+		ft_putchar_fd('-', fd);
 		if (n == -2147483648)
 		{
-			ft_putchar_fd('2' , fd);
+			ft_putchar_fd('2', fd);
 			n = n % 1000000000;
 		}
 		n = n * (-1);
@@ -34,7 +33,7 @@ void ft_putnbr_fd(int n, int fd)
 	}
 	while (a >= 1)
 	{
-		ft_putchar_fd('0' + n / a , fd);
+		ft_putchar_fd('0' + n / a, fd);
 		n = n % a;
 		a = a / 10;
 	}

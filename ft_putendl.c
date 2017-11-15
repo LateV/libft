@@ -12,13 +12,13 @@
 
 #include "libft.h"
 
-void 	ft_putendl(char const *s)
+void	ft_putendl(char const *s)
 {
 	int a;
 
 	a = 0;
 	if (s)
-	{	
+	{
 		while (s[a] != '\0')
 		{
 			ft_putchar(s[a]);
