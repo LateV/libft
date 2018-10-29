@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vibondar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/03 14:52:16 by vibondar          #+#    #+#             */
-/*   Updated: 2017/11/03 14:52:17 by vibondar         ###   ########.fr       */
+/*   Created: 2017/10/31 16:25:33 by vibondar          #+#    #+#             */
+/*   Updated: 2017/10/31 19:34:36 by vibondar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char const *s, int fd)
+void		ft_strtoupper(char *str)
 {
-	int a;
+	int i;
 
-	a = 0;
-	if (s)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		while (s[a] != '\0')
-		{
-			ft_putchar_fd(s[a], fd);
-			a++;
-		}
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] = str[i] - 32;
+		i++;
 	}
 }

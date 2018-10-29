@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vibondar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/31 16:24:48 by vibondar          #+#    #+#             */
-/*   Updated: 2017/10/31 16:24:50 by vibondar         ###   ########.fr       */
+/*   Created: 2017/11/03 14:52:16 by vibondar          #+#    #+#             */
+/*   Updated: 2017/11/03 14:52:17 by vibondar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isascii(int c)
+void	ft_putstr_fd(char const *s, int fd)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
+	if (s)
+		write(fd, s, ft_strlen(s));
 }
